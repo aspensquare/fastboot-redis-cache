@@ -8,7 +8,9 @@ class RedisCache {
   constructor(options) {
     let client = this.client = redis.createClient({
       host: options.host,
-      port: options.port
+      password: options.password,
+      port: options.port,
+      tls: options.tls
     });
 
     this.expiration = options.expiration || FIVE_MINUTES;
