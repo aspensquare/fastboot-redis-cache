@@ -10,6 +10,7 @@ class RedisCache {
       host: options.host,
       password: options.password,
       port: options.port,
+      socket_keepalive: options.socket_keepalive,
       tls: options.tls
     });
 
